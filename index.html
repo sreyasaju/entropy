@@ -1,21 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <title>NIS UNESCO 2024–25</title>
+    <link rel="stylesheet" href="/style.css">
   </head>
-  <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
+
+  <body style="background-color: #faf6fb">
+    <section class="section has-text-centered pt-6 pb-6">
+      <div class="container">
         
-      </p>
-    </div>
-  </section>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h1 class="title is-3 has-text-weight-semibold mb-4" style="font-style: italic;">
+          “Pick a topic. Make it awesome.”
+        </h1><br>
+
+        <h1 class="title is-size-1 has-text-weight-extrabold	">NIS UNESCO EXHIBITION’25</h1>
+      
+        <h4 class="subtitle has-text-weight-medium color="#291f2977">
+          UNESCO IT TEAM ✕ SCIENCE TEAM 2024–2025
+        </h4>
+
+        <div class="notification  mb-5" style="border-left: 4px solid var(--accent-dark); background-color: #dacde2;">
+          <p class="is-size-5 has-text-weight-semibold mb-2">Welcome to the Theme Selector! 👋</p>
+          <p>
+            Here’s how it works: You can browse the list of available science exhibition topics below.
+            Once you find one you like, click to select it — but be quick! Topics are locked on a 
+            <strong>first-come-first-serve</strong> basis. Once a topic is selected, it cannot be chosen again.
+          </p>
+          <p class="mt-2">Make your choice count. Choose wisely, and let your creativity lead the way!</p>
+        </div>
+
+        <div class="buttons has-addons is-centered mt-4 mb-5">
+          <button class="button is-small is-link is-light">All</button>
+          <button class="button is-small is-success is-light">Selected</button>
+          <button class="button is-small is-info is-light">Available</button>
+        </div>
+
+
+        <!-- Topic Table -->
+        <table class="table is-fullwidth is-hoverable">
+          <thead>
+            <tr>
+              <th>Sl. No.</th>
+              <th>Themes</th>
+              <th>Subject</th>
+              <th>Classes</th>
+            </tr>
+          </thead>
+          <tbody id="topic-table-body">
+            <!-- JS will populate this -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 👩‍💻 Footer -->
+    <footer class="footer has-background-white-bis">
+      <div class="content has-text-centered">
+        <p class="is-size-7 has-text-grey">
+          Designed & developed by <strong>Sreya Saju</strong> 💻 • NIS UNESCO Team 2024–25
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -1,4 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 /* Many colors and styling has been imported using the Bulma Customizer at https://bulma.io/documentation/ */
 :root {
     --bulma-primary-h: 298deg;
@@ -6,23 +9,26 @@
     --bulma-primary-l: 86%;
     
     /* accent Colors */
-    --accent-light: #ab9dab;  /* light accent color */
+    --accent-light: #e0cce0;  /* light accent color */
     --accent-dark: #2a1e2a;   /* dark accent color */
 }
-  
-body {
+
+
+html {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f6f3f8;
+    background-color: #faf6fb;
     color: var(--accent-dark);
     margin: 0;
     padding: 0;
 }
+
 
 table {
     width: 100%;
     border-collapse: separate; 
     border-radius: 8px;  
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
 }
 
 th {
@@ -41,7 +47,7 @@ tr {
     border-radius: 8px;
 }
 
-/* Table Body */
+
 td {
     background-color: #fff;
     padding: 12px 15px;
@@ -56,7 +62,7 @@ td {
     padding: 20px;
 }
 
-tr:hover {
+tbody tr:hover {
     background-color: #f7f4f7;
 }
 
