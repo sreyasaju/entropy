@@ -1,0 +1,28 @@
+{
+  "name": "entropy",
+  "version": "0.0.0",
+  "description": "Topic selector tool",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sreyasaju/entropy.git"
+  },
+  "author": "Sreya Saju",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sreyasaju/entropy/issues"
+  },
+  "homepage": "https://github.com/sreyasaju/entropy#readme",
+  "dependencies": {
+    "bulma": "^1.0.3",
+    "firebase": "^11.6.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.2"
+  }
+}
