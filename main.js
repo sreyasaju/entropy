@@ -19,33 +19,52 @@ document.addEventListener('DOMContentLoaded', async () => {
         biology: "is-link"
     };
     
-    topics.forEach((topic, index) => {
-      const sel = selected[topic.id];
-      const tr = document.createElement('tr');
-  
-      const normalizedSubject = topic.subject.trim().toLowerCase();
-      console.log("Normalized subject:", normalizedSubject);
-      const subjectColor = colorMap[normalizedSubject] || "is-light";
-  
-      tr.innerHTML = `
-        <td>${index + 1}</td>
-        <td>${topic.name}</td>
-        <td><span class="tag ${subjectColor}">${topic.subject}</span></td>
-        <td>
-          ${
-            sel
-              ? `
-            <div class="bubble-wrapper">
-              <span class="tag is-success">Selected</span>
-              <div class="info-bubble">
-                ${sel.name}<br>${sel.class}<br>${sel.adminNo}
-              </div>
-            </div>`
-              : `<span class="tag is-light">Available</span>`
-          }
-        </td>
-      `;
+    function renderTable(filter = "all") {
+        tableBody.innerHTML = ""; 
     
-      tableBody.appendChild(tr);
+        topics.forEach((topic, index) => {
+          const sel = selected[topic.id];
+          const isSelected = !!sel;
+    
+          if (
+            (filter === "Selected" && !isSelected) ||
+            (filter === "Available" && isSelected)
+          ) {
+            return;
+          }
+    
+          const tr = document.createElement('tr');
+          const normalizedSubject = topic.subject.trim().toLowerCase();
+          const subjectColor = colorMap[normalizedSubject] || "is-light";
+    
+          tr.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${topic.name}</td>
+            <td><span class="tag ${subjectColor}">${topic.subject}</span></td>
+            <td>
+              ${
+                sel
+                  ? `
+                <div class="bubble-wrapper">
+                  <span class="tag is-dark">Selected</span>
+                  <div class="info-bubble">
+                    ${sel.name}<br>${sel.class}<br>${sel.adminNo}
+                  </div>
+                </div>`
+                  : `<span class="tag is-light">Available</span>`
+              }
+            </td>
+          `;
+    
+          tableBody.appendChild(tr);
+        });
+      }
+    
+      // Initial render
+      renderTable("all");
+    
+      // Filter button event listeners
+      document.getElementById("filter-all").addEventListener("click", () => renderTable("All"));
+      document.getElementById("filter-selected").addEventListener("click", () => renderTable("Selected"));
+      document.getElementById("filter-available").addEventListener("click", () => renderTable("Available"));
     });
-  });
