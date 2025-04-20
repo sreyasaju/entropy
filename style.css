@@ -9,7 +9,7 @@
     --bulma-primary-l: 86%;
     
     /* accent Colors */
-    --accent-light: #e0cce0;  /* light accent color */
+    --accent-light: #e6d6e6;  /* light accent color */
     --accent-dark: #2a1e2a;   /* dark accent color */
 }
 
@@ -64,11 +64,6 @@ td {
 
 tbody tr:hover {
     background-color: #f7f4f7;
-}
-
-.tag.is-success {
-    background-color: var(--accent-dark);
-    color: #fff;
 }
 
 .tag.is-light {
