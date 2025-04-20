@@ -36,11 +36,10 @@
         </div>
 
         <div class="buttons has-addons is-centered mt-4 mb-5">
-          <button id="filter-all" class="button is-small is-light">All</button>
-          <button id="filter-selected" class="button is-small is-light">Selected</button>
-          <button id="filter-available" class="button is-small is-light">Available</button>
+          <button id="ss-filter-all" class="button is-small is-light">All</button>
+          <button id="ss-filter-unavailable" class="button is-small is-light">Unavailable</button>
+          <button id="ss-filter-available" class="button is-small is-light">Available</button>
         </div>
-
 
         <!-- topic Table -->
         <table class="table is-fullwidth is-hoverable">
@@ -52,14 +51,71 @@
               <th>Status</th>
             </tr>
           </thead>
-          <tbody id="topic-table-body">
+          <tbody id="ss-topic-table-body">
             <!-- JS will populate this -->
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!--modal box after selection-->
+    <div class="modal" id="ss-select-modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Select Topic</p>
+          <button class="delete" ar ia-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+          <div class="field">
+            <label class="label">Name</label>
+            <input id="ss-student-name" class="input" type="text" placeholder="Your name">
+          </div>
+
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <label class="label">Class</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select id="student-class">
+                      <option value="" disabled selected>Select class</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="field">
+                <label class="label">Section</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select id="student-section">
+                      <option value="" disabled selected>Select section</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="C">C</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Admission No</label>
+            <input id="ss-student-admin" class="input" type="text" placeholder="Your admin number">
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success" id="ss-submit-selection">Submit</button>
+          <button class="button cancel-btn" id="ss-cancel-selection">Cancel</button>
+        </footer>
+      </div>
+    </div>
+
+    <!-- footer -->
     <footer class="footer has-background-white-bis">
       <div class="content has-text-centered">
         <p class="is-size-7 has-text-grey">

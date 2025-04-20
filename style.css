@@ -1,5 +1,4 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 /* Many colors and styling has been imported using the Bulma Customizer at https://bulma.io/documentation/ */
@@ -9,11 +8,10 @@
     --bulma-primary-l: 86%;
     
     /* accent Colors */
-    --accent-light: #e6d6e6;  /* light accent color */
-    --accent-dark: #372537;   /* dark accent color */
+    --accent-light: #e0cce0;  /* light accent color */
+    --accent-dark: #594759;   /* dark accent color */
 }
-
-
+  
 html {
     font-family: 'Montserrat', sans-serif;
     background-color: #faf6fb;
@@ -21,7 +19,6 @@ html {
     margin: 0;
     padding: 0;
 }
-
 
 table {
     width: 100%;
@@ -66,10 +63,16 @@ tbody tr:hover {
     background-color: #f7f4f7;
 }
 
+
 .tag.is-light {
     background-color: var(--accent-light);
     color: var(--accent-dark);
 }
+
+.tag.is-dark  {
+    background-color: var(--accent-dark);
+    color: white;
+} 
 
 .bubble-wrapper {
     position: relative;
@@ -79,17 +82,22 @@ tbody tr:hover {
 .info-bubble {
     display: none;
     position: absolute;
-    top: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--accent-light);
-    border: 1px solid var(--accent-dark);
+    left: 45%;
+    top: 65%;
+    transform: translateX(-25%);
+    border: 2px dashed  var(--accent-dark);
     color: var(--accent-dark);
     padding: 0.75rem 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-size: 0.9rem;
     white-space: nowrap;
+    background: linear-gradient(135deg, rgba(41, 29, 41, 0.058), rgba(210, 204, 204, 0.084));
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 10px 32px 0 rgba(69, 69, 69, 0.30);
 }
 
 .bubble-wrapper:hover .info-bubble {
