@@ -96,8 +96,8 @@ tbody tr:hover {
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(2px);
     border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 10px 32px 0 rgba(69, 69, 69, 0.30);
+    border:1px solid rgba(255, 255, 255, 0.533);
+    box-shadow: 5 5px 22px 0 rgba(128, 124, 128, 0.575);
 }
 
 .bubble-wrapper:hover .info-bubble {
